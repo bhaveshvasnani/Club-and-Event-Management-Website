@@ -1,0 +1,51 @@
+<script>
+function registerme(f1,f2,f3,f4,f5,f6)
+{
+		//alert(f1+","+f2+","+f3+","+f4+","+f5+","+f6);
+		var v1 = document.getElementById(f1).value;
+		var v2 = document.getElementById(f2).value;
+		//alert(v1+","+v2);
+		var v3 = document.getElementById(f3).value;
+		//alert(v1+","+v2+","+v3);
+		var v4 = document.getElementById(f4).value;
+		var v5 = document.getElementById(f5).value;
+		//alert(v1+","+v2+","+v3+","+v4+","+v5+","+v6);
+		$("#message").load("../actions/supplier_action.php", {'Supplier_ID':v1, 'First_name':v2, 'Mid_name':v3, 'Last_name':v4, 'Ph_number':v5} );
+	}
+	
+</script>
+<div class='tablediv' style="width:300px; height:auto; margin:0 auto;">
+		<form action='../actions/supplier_action.php' name='commontable' method='post'>	
+			<div class='tableheading'>Supplier Form</div>	
+			<table class='tablebg'>
+			<tr>
+			<td><span class='textlable'>Supplier_ID</span></td>
+			<td><input type='text' id='Supplier_ID' name='Supplier_ID' /></td>
+		</tr>
+			<tr>
+			<td><span class='textlable'>First_name</span></td>
+			<td><input type='text' id='First_name' name='First_name' /></td>
+		</tr>
+			<tr>
+			<td><span class='textlable'>Mid_name</span></td>
+			<td><input type='text' id='Mid_name' name='Mid_name' /></td>
+		</tr>
+			<tr>
+			<td><span class='textlable'>Last_name</span></td>
+			<td><input type='text' id='Last_name' name='Last_name' /></td>
+		</tr>
+			<tr>
+			<td><span class='textlable'>Ph_number</span></td>
+			<td><input type='text' id='Ph_number' name='Ph_number' /></td>
+		</tr>
+			
+		<tr>					 
+			<td align='center' colspan='2' id="message"></td>
+		</tr>
+		<tr>					 
+			<td align='center' colspan='2'>
+				<input type='button' name='submit' class='jrabtn' value='Register' onclick='registerme("Supplier_ID","First_name","Mid_name","Last_name","Ph_number")' /></td>
+		</tr>
+</table>
+</form>
+</div>

@@ -1,0 +1,59 @@
+<script>
+function registerme(f1,f2,f3,f4,f5)
+	{
+		alert(f1+","+f2+","+f3+","+f4+","+f5);
+		var v1 = document.getElementById(f1).value;
+		var v2 = document.getElementById(f2).value;
+		var v3 = document.getElementById(f3).value;
+		var v4 = document.getElementById(f4).value;
+		var v5 = document.getElementById(f5).value;
+
+		alert(v1+","+v2+","+v3+","+v4+","+v5);
+		
+		$("#message").load("actions/student_action.php", {'Event_ID':v1, 'Event_name':v2, 'Event_venue':v3, 'Date':v4, 'Time':v5} );
+
+	}
+	
+</script>
+<div class='tablediv' style="width:300px; height:auto; margin:0 auto;">
+		<form action='../actions/event_details_action.php' name='commontable' method='post'>	
+			<div class='tableheading'>Event Details Form</div>	
+			<table class='tablebg'>
+			<tr>
+			<td><span class='textlable'>Event Name</span></td>
+			<td><input type='text' id='Event_name' name='Event_name' /></td>
+		</tr>
+                <tr>
+			<td><span class='textlable'>Club Id</span></td>
+			<td><input type='text' id='Club_ID' name='Club_ID' /></td>
+		</tr>
+		<tr>
+			<td><span class='textlable'>Event Venue ID</span></td>
+			<td><input type='text' id='Event_venue' name='Event_venue' /></td>
+		</tr>
+		<tr>
+			<td><span class='textlable'>Event Date</span></td>
+			<td><input type='date' id='Event_date' name='Event_date' /></td>
+		</tr>
+                <tr>
+			<td><span class='textlable'>Event Time</span></td>
+			<td><input type='time' id='Event_time' name='Event_time' /></td>
+		</tr>
+        <tr>
+			<td><span class='textlable'>Sponsor ID</span></td>
+			<td><input type='text' id='Sponsor_ID' name='Sponsor_ID' /></td>
+		</tr>
+        <tr>
+			<td><span class='textlable'>Supplier ID</span></td>
+			<td><input type='text' id='Supplier_ID' name='Supplier_ID' /></td>
+		</tr>
+                <tr>
+			<td><span class='textlable'>Faculty ID</span></td>
+			<td><input type='text' id='Faculty_ID' name='Faculty_ID' /></td>
+		</tr>
+			<tr>					 
+			<td align='center' colspan='2'><input type='submit' name='submit' class='jrabtn' value='Submit'/></td>
+					</tr>
+				</table>
+			</form>
+</div>

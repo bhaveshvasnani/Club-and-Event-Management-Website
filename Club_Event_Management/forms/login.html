@@ -1,0 +1,111 @@
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+    $("#newuserLink").click(function(){
+	//	alert("new user");
+        $("#loginform").hide();
+        $("#regform").show();		
+    });
+    $("#loginLink").click(function(){
+	//	alert("login clicked");
+        $("#regform").hide();
+        $("#loginform").show();
+    });
+});
+	function registerme(f1,f2,f3,f4)
+	{
+		//alert(f1+","+f2+","+f3+","+f4);
+		var v1 = document.getElementById(f1).value;
+		var v2 = document.getElementById(f2).value;
+		var v3 = document.getElementById(f3).value;
+		var v4 = document.getElementById(f4).value;
+		
+//		alert(v1+","+v2+","+v3+","+v4);
+		
+		$("#message").load("actions/user_action.php", {'username':v1, 'password':v2, 'usertype':v4} );
+/*		if((v1.trim()).lenght > 0)
+		{
+			alert((v1.trim()).lenght);
+			if(v2==v3)
+			{
+				$("#commontable").submit();
+			}
+			else
+			{
+				alert("Password not matched");
+			}
+		}
+		else
+		{
+			alert("Please Enter User Name");
+		}
+*/
+	}
+	
+</script>
+
+<form action='actions/login.php'    id="commontable" name='commontable' method='post'>	
+<div id="loginform">
+	<div class='tableheading' style="width:inherit; top:0px;">User Login Form</div>	
+		<table class='tablebg' style="width:300px; height:120px;">
+			<tr>
+				<td><span class='textlable'>User Name</span></td>
+				<td><input type='text'  class="jra_input_text" id='username' name='username' /></td>
+			</tr>
+			<tr>
+				<td><span class='textlable'>Password</span></td>
+				<td><input type='password'  class="jra_input_text" id='password' name='password' /></td>
+			</tr>
+			<tr>					 
+				<td align='center' colspan='2'><input type='submit' name='submit' class='jrabtn' value='Login'/></td>
+			</tr>
+			<tr>					 
+				<td align='right' colspan='2'><a href="#" id="newuserLink" class="alink">New User</a></td>
+			</tr>
+
+		</table>
+
+</div>
+<div id="regform" style="display:none;">		
+<!--	<form action='actions/user_action.php' name='commontable' method='post'>	-->
+		<div class='tableheading'  style="width:inherit; top:0px;">User Registration Form</div>	
+			<table class='tablebg'  style="width:300px; height:120px;">				
+				<tr>
+					<td><span class='textlable'>User Name</span></td>
+					<td><input type='text'  class="jra_input_text" id='usernameR' name='usernameR' /></td>
+				</tr>
+				<tr>
+					<td><span class='textlable'>Password</span></td>
+					<td><input type='password'  class="jra_input_text" id='passwordR' name='passwordR' /></td>
+				</tr>
+				<tr>
+					<td><span class='textlable'>Confirm Password</span></td>
+					<td><input type='password'  class="jra_input_text" id='cpasswordR' name='cpassword' /></td>
+				</tr>		
+				<tr>
+					<td><span class='textlable'>Usertype</span></td>
+					<td>
+						<select id='usertypeR' name='usertype' class="jra_input_text jraselect" >
+							<option value="student">Student</option>
+							<option value="faculty">Admin</option>
+							<option value="eventmgr">Club Member</option>					
+						</select>
+					</td>
+				</tr>
+				<tr>					 
+					<td align='center' colspan='2' id="message">
+					</td>
+				</tr>
+
+				<tr>					 
+					<td align='center' colspan='2'>
+					<input type='button' name='submit' class='jrabtn' value='Register' onclick='registerme("usernameR","passwordR","cpasswordR","usertypeR")' /></td>
+				</tr>
+				<tr>					 
+					<td align='right' colspan='2'><a href="#" id="loginLink" class="alink">Sign In</a></td>
+				</tr>				
+			</table>
+		
+</div>
+
+</form>

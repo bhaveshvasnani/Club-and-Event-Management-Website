@@ -1,0 +1,32 @@
+<div class='tablediv'>
+	<form action='actions/user_action.php' name='commontable' method='post'>	
+		<div class='tableheading'>User Registration Form</div>	
+		<table class='tablebg'>
+			<tr>
+				<td><span class='textlable'>Username</span></td>
+				<td><input type='text' id='username' name='username' /></td>
+			</tr>
+			<tr>
+				<td><span class='textlable'>Password</span></td>
+				<td><input type='text' id='password' name='password' /></td>
+			</tr>
+			<tr>
+				<td><span class='textlable'>Confirm Password</span></td>
+				<td><input type='text' id='cpassword' name='cpassword' /></td>
+			</tr>		
+			<tr>
+				<td><span class='textlable'>Usertype</span></td>
+				<td>
+					<select id='usertype' name='usertype' class="jra_input_text jraselect_small" >
+						<option value="student">Student</option>
+						<option value="faculty">Admin</option>
+						<option value="eventmgr">Club Member</option>					
+					</select>
+				</td>
+			</tr>
+			<tr>					 
+				<td align='center' colspan='2'><input type='submit' name='submit' class='jrabtn' value='Submit'/></td>
+			</tr>
+		</table>
+	</form>
+</div>

@@ -1,0 +1,78 @@
+<script>
+function registerme(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11)
+{
+		alert(f1+","+f2+","+f3+","+f4+","+f5+","+f6+","+f7+","+f8+","+f9+","+f10+","+f11);
+		var v1 = document.getElementById(f1).value;
+		var v2 = document.getElementById(f2).value;
+//		alert(v1+","+v2);
+		var v3 = document.getElementById(f3).value;
+//		alert(v1+","+v2+","+v3);
+		var v4 = document.getElementById(f4).value;
+		var v5 = document.getElementById(f5).value;
+		var v6 = document.getElementById(f6).value;
+		var v7 = document.getElementById(f7).value;
+		var v8 = document.getElementById(f8).value;
+		var v9 = document.getElementById(f9).value;
+		var v10 = document.getElementById(f10).value;
+        var v11 = document.getElementById(f11).value;
+//		alert(v1+","+v2+","+v3+","+v4+","+v5+","+v6+","+v7+","+v8+","+v9+","+v10);
+		$("#message").load("../actions/student_action.php", {'Student_ID':v1, 'School_ID':v2, 'First_name':v3, 'Mid_name':v4, 'Last_name':v5, 'Ph_number':v6, 'Address':v7, 'Sex':v8, 'Email_ID':v9, 'Birthday':v10, 'Event_ID':v11} );
+	}
+	
+</script>
+<div class='tablediv' style="width:300px; height:auto; margin:0 auto;">
+	<form action='../actions/student_action.php' name='commontable' method='post'>	
+		<div class='tableheading'>Student Registration Form</div>	
+		<table class='tablebg'>
+		<tr>
+		<td><span class='textlable'>Student Id</span></td>
+		<td><input type='text' id='Student_ID' name='Student_ID' /></td>
+	</tr>	
+		<tr>
+		<td><span class='textlable'>First Name</span></td>
+		<td><input type='text' id='First_name' name='First_name' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Middle Name</span></td>
+		<td><input type='text' id='Mid_name' name='Mid_name' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Last Name</span></td>
+		<td><input type='text' id='Last_name' name='Last_name' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Phone Number</span></td>
+		<td><input type='text' id='Ph_number' name='Ph_number' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Address</span></td>
+		<td><input type='text' id='Address' name='Address' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Gender</span></td>
+		<td><input type='text' id='Sex' name='Sex' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Email_ID</span></td>
+		<td><input type='text' id='Email_ID' name='Email_ID' /></td>
+	</tr>
+		<tr>
+		<td><span class='textlable'>Birthday</span></td>
+		<td><input type='text' id='Birthday' name='Birthday' /></td>
+	</tr>
+    <tr>
+		<td><span class='textlable'>Event ID</span></td>
+		<td><input type='text' id='Event_ID' name='Event_ID' /></td>
+	</tr>
+    
+	<tr>					 
+		<td align='center' colspan='2' id="message"></td>
+	</tr>
+
+		<tr>					 
+					<td align='center' colspan='2'>
+<input type='button' name='submit' class='jrabtn' value='Register' onclick='registerme("Student_ID","School_ID","First_name","Mid_name","Last_name","Ph_number","Address","Sex","Email_ID","Birthday","Event_ID")' /></td>
+				</tr>
+			</table>
+		</form>
+</div>

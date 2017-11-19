@@ -1,0 +1,82 @@
+/* CSS Document */
+
+.jraformbg
+{
+	width:1024px;
+	height:700px;
+	margin-left:20px;
+	margin-top:20px;
+	position:fixed;
+	background-color:#f7f7f7;	
+	box-shadow: 15px 20px 10px #eceade;
+}
+.tablediv
+{
+	width:400px;
+	height:auto;
+	margin:0 auto;
+	margin-top:20px;
+	border:#91A2E8 1px thin;
+	border-radius:10px 10px 0px 0px;
+	box-shadow: 15px 20px 10px #eceade;
+
+}
+.tablebg
+{
+	width:405px;
+	height:auto;
+	margin:0 auto;
+	text-align:left;
+	padding:10px;
+	border:#CCAABB 1px solid;
+	background-color:#f9f4f1;
+}
+.tableheading
+{
+	background-color:#a45d87;
+	color:#ffffff;
+	height:30px;
+	width:388px;
+	margin:0 auto;	
+	padding:8px;
+	font-size:24px;
+	font-weight:bold;
+	border:#CCAABB 1px solid;
+	border-radius:10px 10px 0px 0px;
+	text-shadow: -2px -2px #b00;
+}
+.textlable
+{
+	color:#893667;
+	font-weight:bold;
+	font-size:14px;
+	text-shadow: 2px 2px #fff;
+	
+}
+.jraformbg input
+{
+	border:#febbcc solid 1px;
+	border-radius:5px;
+	height:24px;
+	text-indent:5px;
+}
+
+.jraformbg input:hover
+{
+	background-color:#FFFFB9;
+}
+.jrabtn
+{
+	background-color:#a45d87;
+	color:#ffffff;
+	font-size:18px;
+	text-indent:0px;
+	padding:0px 10px 0px 10px;
+	margin-top:10px;
+	width:auto;
+}
+.jrabtn:hover
+{
+	background-color:#a45d87;
+	color:#0000ff;	
+}
